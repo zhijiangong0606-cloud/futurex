@@ -1,0 +1,49 @@
+[exchange]
+testnet = true
+symbols = ["BTCUSDT"]
+timeframes = ["1m", "5m", "15m", "1h", "4h"]
+leverage = 5
+margin_type = "ISOLATED"
+
+[risk]
+max_risk_per_trade = 0.02
+hard_cap_per_trade = 0.05
+atr_multiplier = 2.0
+atr_period = 14
+max_concurrent_positions = 3
+daily_loss_limit = 0.03
+drawdown_tier1 = 0.03
+drawdown_tier2 = 0.05
+drawdown_tier3 = 0.10
+cooldown_hours = 24
+correlated_exposure_limit = 0.08
+
+[strategy]
+trend_weight = 0.40
+momentum_weight = 0.30
+pullback_weight = 0.20
+volume_weight = 0.10
+entry_threshold = 60.0
+partial_threshold = 40.0
+ema_fast = 20
+ema_medium = 50
+ema_slow = 200
+rsi_period = 14
+bb_period = 20
+bb_std = 2.0
+
+[ai]
+enabled = true
+model = "claude-haiku-4-5-20251001"
+max_daily_calls = 20
+cooldown_hours = 4.0
+max_sentiment_adjustment = 0.3
+use_batch_api = true
+
+[storage]
+redis_url = "redis://localhost:6379/0"
+duckdb_path = "data/trading.duckdb"
+
+[notify]
+telegram_enabled = true
+notify_on = ["trade_open", "trade_close", "risk_alert", "system_error"]

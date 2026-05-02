@@ -1,0 +1,11 @@
+[exchange]
+testnet = true
+base_url = "https://testnet.binancefuture.com"
+ws_url = "wss://stream.binancefuture.com"
+symbols = ["BTCUSDT"]
+leverage = 3
+margin_type = "ISOLATED"
+
+[risk]
+max_risk_per_trade = 0.01
+max_concurrent_positions = 1

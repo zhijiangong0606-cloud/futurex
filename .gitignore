@@ -1,0 +1,49 @@
+# Secrets
+.env
+
+# Config with real credentials
+config/mainnet.toml
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# Build
+dist/
+build/
+*.egg-info/
+
+# Data (databases & historical data)
+data/*.duckdb
+data/*.duckdb.wal
+data/*.db
+data/state.db
+data/state_test.db
+data/state_integration_test.db
+data/historical/
+data/historical_test/
+data/download_progress.json
+
+# Logs
+logs/
+
+# Virtual environments
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# UV
+uv.lock
