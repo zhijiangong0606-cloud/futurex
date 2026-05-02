@@ -50,6 +50,7 @@ class StrategyConfig(BaseModel):
 class AIConfig(BaseModel):
     enabled: bool = True
     model: str = "claude-haiku-4-5-20251001"
+    review_mode: str = "moderate"
     max_daily_calls: int = 20
     cooldown_hours: float = 4.0
     max_sentiment_adjustment: float = 0.3

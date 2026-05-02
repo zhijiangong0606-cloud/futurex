@@ -4,6 +4,7 @@ import time
 from typing import Any
 
 from ..core.config import AIConfig
+from ..core.constants import SignalStrength
 from ..core.logging import get_logger
 from .base import TradeSignal
 
@@ -37,6 +38,12 @@ class AIFilter:
 
     def should_call(self, signal: TradeSignal) -> bool:
         if not self._config.enabled:
+            return False
+
+        review_mode = self._config.review_mode.lower()
+        if review_mode in {"off", "disabled", "none"}:
+            return False
+        if review_mode == "moderate" and signal.strength != SignalStrength.MODERATE:
             return False
 
         today = time.strftime("%Y-%m-%d")

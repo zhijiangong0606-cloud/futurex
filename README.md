@@ -12,6 +12,19 @@
 
 ---
 
+## Grant Review Materials
+
+For token-grant reviewers and AI tooling evaluators:
+
+- [Xiaomi MiMo Token Grant Application Notes](docs/MI_TOKEN_GRANT_APPLICATION.md)
+- [Chinese Grant Form Answers](docs/GRANT_FORM_ANSWERS_CN.md)
+- [Project Evidence Map](docs/PROJECT_EVIDENCE.md)
+- [Security Notes](docs/SECURITY.md)
+
+The repository demonstrates a full AI-assisted engineering and research loop: strategy generation, out-of-sample invalidation, walk-forward validation, forensic failure diagnosis, adaptive regime filtering, risk-gated execution, and operational monitoring.
+
+---
+
 ## Overview
 
 Futurex is a production-ready quantitative trading system designed for cryptocurrency futures markets. Unlike conventional trading bots that blindly execute signals in all market conditions, Futurex introduces a **Market Regime State Machine** that dynamically identifies whether the current environment is suitable for trading — and refuses to trade when it isn't.
@@ -272,7 +285,7 @@ futurex/
 ### Installation
 
 ```bash
-git clone https://github.com/your-username/futurex.git
+git clone https://github.com/zhijiangong0606-cloud/futurex.git
 cd futurex
 uv sync
 ```

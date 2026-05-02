@@ -35,6 +35,7 @@ bb_std = 2.0
 [ai]
 enabled = true
 model = "claude-haiku-4-5-20251001"
+review_mode = "moderate"
 max_daily_calls = 20
 cooldown_hours = 4.0
 max_sentiment_adjustment = 0.3

@@ -129,8 +129,9 @@ class SignalScorer:
             "volume": volume_score if direction == Side.LONG else -volume_score,
         }
 
-        # No AI review needed for this mechanical strategy
-        requires_ai = False
+        # Moderate signals are useful enough to consider, but ambiguous enough to
+        # benefit from the optional AI sentiment filter before risking capital.
+        requires_ai = strength == SignalStrength.MODERATE
 
         signal = TradeSignal(
             symbol=symbol,
